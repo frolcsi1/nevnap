@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu - HU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BOLDOG NÉVNAPOT!</title>
+</head>
+<body>
+    <h1>BOLDOG NÉVNAPOT APA!</h1>
+    <h2>2026. 03. 24.</h2>
+    <script>
+        const lufiszam = 100;
+        const szinek = [
+            ['#ff4d4d', '#990000'], // Piros
+            ['#4d79ff', '#002699'], // Kék
+            ['#ffeb3b', '#fbc02d'], // Sárga
+            ['#4caf50', '#2e7d32'], // Zöld
+            ['#e91e63', '#880e4f'], // Rózsaszín
+            ['#9c27b0', '#4a148c']  // Lila
+        ];
+
+        for (let i = 0; i < lufiszam; i++) {
+            const randomSzin = szinek[Math.floor(Math.random() * szinek.length)];
+            const randomLeft = Math.random() * 100 - 10;
+            const randomBottom = Math.random() * 100 - 10;
+            const randomDelay = Math.random() * 5;
+            const randomSize = 0.5 + Math.random() * 0.8;
+
+            const lufi = document.createElement('div');
+            lufi.className = 'lufi';
+
+            lufi.style.background = `radial-gradient(circle at 30% 30%, ${randomSzin[0]}, ${randomSzin[1]})`;
+            lufi.style.color = randomSzin[1]
+            lufi.style.left = randomLeft + 'vw';
+            lufi.style.bottom = randomBottom + 'vh';
+            lufi.style.animationDelay = randomDelay + 's'
+            lufi.style.transform = `scale(${randomSize})`;
+            
+            document.body.appendChild(lufi);
+        }
+    </script>
+</body>
+</html>
