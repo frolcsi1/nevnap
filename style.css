@@ -4,7 +4,6 @@ html {
 
 h1 {
     top: 40px;
-    margin: 20px;
     text-align: center;
     font-size: 4rem;
     background: linear-gradient(45deg, rgb(0,255, 0), rgb(0, 191, 255));
